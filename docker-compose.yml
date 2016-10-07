@@ -1,7 +1,19 @@
-version: "2"
+version: '2'
 services:
   app:
-    build: .
-    volumes:
-      - .:/usr/src/app/
+    extends:
+      file: docker/docker-compose.common.yml
+      service: app
+    volumes: # TODO pull dependencies out of project folder: https://github.com/ember-cli/ember-cli/pull/3698
+      - ./app/:/usr/src/app/app/
+      - ./config/:/usr/src/app/config/
+      - ./package.json:/usr/src/app/package.json
+      - ./bower.json:/usr/src/app/bower.json
+      - ./ember-cli-build.js:/usr/src/app/ember-cli-build.js
+      - ./scripts/:/usr/src/app/scripts/
+      - ./tests/:/usr/src/app/tests/
+      - ./vendor/:/usr/src/app/vendor/
+    ports:
+      - 4200:4200
+      - 49152:49152
 

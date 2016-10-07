@@ -1,0 +1,12 @@
+version: '2'
+services:
+  app:
+    build: ..
+    ports:
+      - 4200
+      - 49152
+    command:
+      - scripts/start_server.sh
+    env_file:
+      - development.env
+

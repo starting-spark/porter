@@ -24,9 +24,7 @@ clear_out_containers() {
 
   case $environment in
     'development')
-      docker-compose stop
       docker-compose down -v
-      docker-compose rm --force
     ;;
   esac
 }

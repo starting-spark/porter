@@ -17,8 +17,10 @@ Getting Started
 
 Build
 -----
-1. rm -rf docs/* dist/* 
-2. docker-compose run app scripts/build.sh
-3. chown -R username dist # docker saves files as root
-4. mv dist/* docs/
+1. docker-compose run app scripts/build.sh
+
+Deploy
+------
+1. docker-compose -f docker-compose.yml -f docker/docker-compose.production.yml \
+  run app scripts/deploy.sh 
 

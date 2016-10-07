@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'porter',
     podModulePrefix: 'porter/pods',
     environment: environment,
-    rootURL: '/porter/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -40,7 +40,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
   }
 
   return ENV;

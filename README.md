@@ -15,3 +15,7 @@ Getting Started
 3. start services: `docker-compose up`
 4. open browser and visit `http://localhost:4200`
 
+Build
+-----
+1. docker-compose run app scripts/build.sh
+

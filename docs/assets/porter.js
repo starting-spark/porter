@@ -305,7 +305,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("porter/app")["default"].create({"name":"porter","version":"0.0.0+4624f552"});
+  require("porter/app")["default"].create({"name":"porter","version":"0.0.0+74e6de12"});
 }
 
 /* jshint ignore:end */

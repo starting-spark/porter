@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('trades');
+  this.route('dashboard');
 });
 
 export default Router;

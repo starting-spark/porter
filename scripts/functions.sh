@@ -11,6 +11,7 @@ setup_containers() {
   case $environment in
     'development')
       docker-compose build
+      docker-compose run server scripts/setup_database.sh
     ;;
     'staging')
       docker-compose -f docker-compose.yml -f docker/docker-compose.production.yml \

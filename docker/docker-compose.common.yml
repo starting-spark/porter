@@ -10,3 +10,13 @@ services:
     env_file:
       - development.env
 
+  server:
+    extends:
+      file: ../server/docker/docker-compose.common.yml
+      service: app
+
+  server_db:
+    extends:
+      file: ../server/docker/docker-compose.common.yml
+      service: db
+

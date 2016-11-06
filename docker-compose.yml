@@ -18,3 +18,17 @@ services:
       - 4200:4200
       - 49152:49152
 
+  server:
+    extends:
+      file: docker/docker-compose.common.yml
+      service: server
+    ports:
+      - 8000:8000
+    links:
+      - server_db:db
+
+  server_db:
+    extends:
+      file: docker/docker-compose.common.yml
+      service: server_db
+

@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('trade', 'Unit | Model | trade', {
+moduleForModel('trades', 'Unit | Model | trades', {
   // Specify the other units that are required for this test.
   needs: []
 });

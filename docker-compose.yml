@@ -26,6 +26,8 @@ services:
       - 8000:8000
     links:
       - server_db:db
+    volumes:
+      - ./server/:/usr/src/app/
 
   server_db:
     extends:
